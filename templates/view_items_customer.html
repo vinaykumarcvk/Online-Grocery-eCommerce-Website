@@ -1,0 +1,55 @@
+{% include "customer_head.html" %}
+
+<script>
+    $(document).ready(function(){
+        get_items()
+       $("#myForm").on("submit",function(e){
+        e.preventDefault();
+        get_items(e);
+
+       });
+    })
+    function get_items(){
+        let keyword = $("#keyword").val()
+        let category_id = $("#category_id").val();
+        let url = "http://127.0.0.1:5000/get_items?keyword="+keyword+"&category_id="+category_id;
+        $.get(url,function(data,status){
+            $("#items").html(data)
+            console.log(data);
+         });
+    }
+
+// <!-- $(document).ready(function(){-->
+// <!--        get_items()-->
+// <!--       $("#category_id").on("submit",function(){-->
+// <!--            get_items();-->
+
+// <!--       });-->
+// <!--    })-->
+</script>
+<div class="container mt-3">
+    <form id="myForm">
+    <div class="row">
+        <div class="col-md-3">
+                <div class="h6 text-white"><b>Choose Category :</b></div>
+                <select name="category_id" id="category_id" class="form-control mt-2">
+                    <option value="">Choose Category</option>
+                    {% for category in categories: %}
+                        <option value="{{category['_id']}}">{{category['category_name']}}</option>
+                    {%endfor%}
+                </select>
+        </div>
+        <div class="col-md-6 ">
+            <div class="searching">
+                <b class="text-white">Search Grocery's:</b>
+                <input type="search" id="keyword" name="keyword"  placeholder="Search Grocery" class="form-control mt-1">
+            </div>
+        </div>
+        <div class="col-md-2 mt-3">
+             <input type="submit" value="Filter" class="btn btn-primary w-100 form-control mt-2">
+        </div>
+    </div>
+</form>
+<div id="items"></div>
+</div>
+

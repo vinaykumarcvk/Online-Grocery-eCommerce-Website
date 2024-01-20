@@ -1,0 +1,40 @@
+{%include "head.html"%}
+
+<div class="body" style="position:absolute;left:0;top:100px;z-index:1000;width:100%;">
+    <link rel="stylesheet" href="../static/style.css">
+
+<br>
+<div class="row">
+  <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="card  p-3 mt-5 display:block">
+            <div class="icon"><i class="fa-solid fa-user"></i></div>
+            <div class="text-center h4 text-dark"><i><b>Admin Login</b></i></div>
+                <form action="admin_login1" method="post">
+                  <div>
+                    <label for ="username"><i><b>Username:</b></i></label>
+                    <input type="text" name="username" id="username" placeholder="Enter username" class="form-control mt-2">
+                  </div>
+                  <div class="mt-3">
+                      <label for ="password"><i><b>Password:</b></i></label>
+                    <input type="password" name="password" id="password"  placeholder="Enter password" class="form-control mt-2">
+                  </div>
+                  <div>
+                    <input type="submit" id="submit" value="Login" class="btn btn-dark w-100 mt-3">
+                  </div>
+                </form>
+        </div>
+    </div>
+</div>
+</div>
+
+<style>
+body{
+    background-image:url("https://www.tftdryair.com/wp-content/uploads/2019/02/3d-background-1400x788.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+
+
+    }
+</style>

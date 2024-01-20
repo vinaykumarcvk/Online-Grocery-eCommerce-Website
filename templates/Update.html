@@ -1,0 +1,51 @@
+{% include "customer_head.html" %}
+<div style="position:absolute;left:0;top:10px;z-index:1000;width:100%;">
+
+<div class="row mt-5">
+  <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="card  mt-5 p-3 display:block" >
+            <div class="text-center h4">Update Details</div>
+                <form action="Update1" method="post">
+                    <input type="hidden"  name="customer_id"  value="{{customer['_id']}}">
+                    <div>
+                        <label for="name"><i><b>Name</b></i></label>
+                        <input type="text"  name="name" id="name"  value="{{customer['name']}}" class="form-control mt-2">
+                    </div>
+                    <div class="mt-3">
+                        <label for="email"><i><b>Email</b></i></label>
+                        <input type="email" name="email" id="email"  value="{{customer['email']}}" class="form-control mt-2">
+                    </div>
+                    <div class="mt-3">
+                        <label for="phone"><i><b>Phone</b></i></label>
+                        <input type="number" name="phone" id="phone"  value="{{customer['phone']}}" class="form-control mt-2">
+                    </div>
+                    <div class="mt-3">
+                        <label for="age"><i><b>Age</b></i></label>
+                        <input type="number" name="age" id="age" value="{{customer['age']}}" class="form-control mt-2">
+                    </div>
+                    <div class="mt-3">
+                        <label for="password"><i><b>Password</b></i></label>
+                        <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" value="{{customer['password']}}" class="form-control mt-2">
+                    </div>
+                    <div>
+                        <label>Gender</label>
+                        <input type="radio"  name="gender" value="male" id="male"{% if  customer['gender']=='Male': %}
+                        checked
+                        {%endif%}
+                        ><label for="male">Male</label>
+                        <input type="radio"  name="gender" value="female" id="female" {% if  customer['gender']=='female': %}
+                        checked
+                        {% endif %}
+                        > <label for="female">Female</label>
+                    </div>
+                    <div class="row">
+                          <div class="col-md-6 mt-2">
+                              <input type="submit" value="Update" class="btn btn-success w-100 mt-2">
+                          </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

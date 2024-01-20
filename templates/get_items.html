@@ -1,0 +1,45 @@
+
+<div class="container-fluid">
+    <div class="row">
+        {% for item in items: %}
+        <div class="col-md-3">
+            <div class="card p-3 mt-2" style="width:100%;height:100%; margin-top:5%;">
+                <div class="text-center">
+                   <img src="../static/items/{{item['item_image']}}" style="height:100px;overflow:auto;width:100px;margin-top:3px;"></div>
+                <div class="mt-1"><b>Item Name:</b>{{item['item_name']}}</div>
+                <div class="mt-1"><b>Price:</b>{{item['item_price']}}</div>
+                <div class="mt-1"><b>Quantity:</b>{{item['item_quantity']}}</div>
+                <div class="mt-1"><b>Description:</b>{{item['item_description']}}</div>
+                {% set category = get_category_name(item['category_id']) %}
+                    <div class="mt-1"><b>Category:</b>{{category['category_name']}}</div>
+                <div>
+                    <form action="cart" method="post">
+                        <div class="quantity">
+                            <b>Add Quantity:</b>
+                            <input type="number" id="item_quantity" name="item_quantity" class="form-control" placeholder="enter add quantity">
+                        </div>
+                        <input type="hidden" name="item_id" value="{{item['_id']}}">
+                        <input type="submit" value="Add To Cart"  class="btn btn-success w-100 form-control mt-3">
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+<style>
+body{
+    background-image:url("https://www.tftdryair.com/wp-content/uploads/2019/02/3d-background-1400x788.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+}
+</style>
+
+
+
+
+

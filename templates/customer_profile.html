@@ -1,0 +1,45 @@
+{%include "customer_head.html" %}
+<div class="text-center color-white mt-5 h1" style="color:#ff3300;"><b>View Profile</b></div>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+        {% for customer in customers: %}
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered ">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Update</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>{{customer['name']}}</td>
+                            <td>{{customer['email']}}</td>
+                            <td>{{customer['phone']}}</td>
+                            <td>{{customer['age']}}</td>
+                            <td>{{customer['gender']}}</td>
+<!--                            <td><a href="updatecustomer?customer_id={{customer[0]}}" class="btn btn-info w-100">Update</a></td>-->
+                            <td>
+                                <form action="Update">
+                                    <input type="hidden" name="customer_id" value="{{customer['_id']}}">
+                                    <input type="submit" value="Update" class="btn btn-danger">
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endfor  %}
+    </div>
+</div>
+
+

@@ -1,0 +1,40 @@
+
+{% include "admin_head.html"%}
+
+<div class="text-center color-white mt-5 h1" style="color:#ff3300;"><b>View items</b></div>
+<div class="flex">
+    {% for item in items: %}
+    <div class="card p-3 mt-5 " style="width:20%;height:50%">
+        <div class="text-center">
+            <img src="{{item['item_image']}}" style="height:100px;overflow:auto;width:150px;">
+        </div>
+        <div class="mt-1">
+            <div><b>Item Name:</b>{{item['item_name']}}</div>
+        </div>
+        <div class="mt-1">
+            <div><b>Price:</b>{{item['item_price']}}</div>
+        </div>
+         <div class=" mt-1">
+             <div><b>Quantity:</b>{{item['item_quantity']}}</div>
+         </div>
+
+         <div class="mt-1">
+             <div><b>Description:</b>{{item['item_description']}}</div>
+         </div>
+    </div>
+{% endfor %}
+</div>
+
+<style>
+    body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-_E7fQSCTA96e5lUY54lmKOugd3tBjVRYxQ&usqp=CAU");
+
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+   }
+</style>
+
+
+
+

@@ -1,0 +1,56 @@
+{%include "customer_head.html" %}
+<div class="container mt-5">
+    <div class=" text-center h4" style="color:#ddd;">Payment Details</div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="card p-3">
+            <form action="update_status" method="post">
+                <div class="pay_now">
+                    <input type="hidden" name="customer_order_id" value="{{customer_order_id}}">
+                    <input type="hidden" name="status" value="Order Placed">
+                    <div>
+                        <b>Total Amount:</b>
+                        <input type="text" name="total_price" readonly class="form-control mt-2" value="${{total_price}}">
+                    </div>
+                    <div class="mt-2">
+                        <b>Card Number:</b>
+                        <input type="number" id="card number" name="card number" class="form-control mt-2" value="card number" >
+                    </div>
+                    <div class="mt-2">
+                        <b>card Holder:</b>
+                        <input type="text" id="cardholder" name="cardholder" placeholder="Enter Holder Name" class="form-control mt-2">
+                    </div>
+                    <div class="mt-2">
+                        <b>CVV Number:</b>
+                        <input type="number" id="number" name="number" value="number" class="form-control mt-2">
+                    </div>
+                    <div class="mt-2">
+                        <b>Date:</b>
+                        <input type="text" name="date" id="date" placeholder="mm/yyyy" class="form-control mt-2">
+                    </div>
+<!--                    <div class="col-md-3 mt-3">-->
+<!--                         <label for="delivery_types">Delivery Types</label>-->
+<!--                         <select  id="delivery_types" name="delivery_types">-->
+<!--                             <option value="">Choose types</option>-->
+<!--                             <option value="Pickup">Pickup</option>-->
+<!--                             <option value="delivery">Delivery</option>-->
+<!--                         </select>-->
+<!--                    </div>-->
+                     <input type="submit" value="pay amount" class="btn btn-primary w-100 mt-3">
+                </div>
+        </form>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+body{
+    background-image:url("https://www.tftdryair.com/wp-content/uploads/2019/02/3d-background-1400x788.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+}
+</style>

@@ -1,0 +1,99 @@
+.image{
+  margin-top:10px;
+  margin-bottom:10px;
+  height: 100px;
+  width: 50%;
+  overflow:auto;
+
+}
+
+.flex{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+
+
+}
+.card1{
+    border:2px solid #ccc;
+    border-radius:10px;
+    box-shadow:0px 0px 3px #ccc;
+    padding:10px;
+    margin-left:10px;
+    margin-right:5px;
+    margin-top:10px;
+}
+.col-md6{
+    margin-top:20px;
+}
+.search{
+    margin-top:25px;
+}
+
+.button{
+    background-color: #4CAF50;
+}
+.home{
+    background-image:url("")
+}
+.part-25{
+    width:25%;
+    margin-top:20px;
+
+}
+.card{
+    border:2px solid #ccc;
+    border-radius:10px;
+    box-shadow:0px 0px 3px #ccc;
+    padding:10px;
+    margin-left:10px;
+    margin-right:5px;
+    margin-top:10px;
+}
+.payment{
+    border:2px solid #ccc;
+    border-radius:10px;
+    box-shadow:0px 0px 3px #ccc;
+    padding:10px;
+    margin-left:10px;
+    margin-right:5px;
+    margin-top:50px;
+    height:300px;
+    width:400px;
+}
+.home{
+    color:white;
+}
+.order{
+    border:2px solid #ccc;
+    border-radius:10px;
+    box-shadow:0px 0px 3px #ccc;
+    padding:10px;
+    margin-left:20px;
+    margin-right:5px;
+    margin-top:10px;
+    width:45%;
+}
+.img{
+    margin-left:100%;
+    margin-top:-300;
+    width:80%;
+}
+.item2{
+    border:2px solid #ccc;
+    border-radius:10px;
+    box-shadow:0px 0px 3px #ccc;
+    padding:5px;
+    margin-left:10px;
+    margin-right:5px;
+    margin-top:20px;
+}
+#item11{
+   background-color:rgb(150, 150, 150);
+}
+#cat{
+   background-color:rgb(150, 150, 150);
+
+}
+#button{
+background-color: #e7e7e7;}

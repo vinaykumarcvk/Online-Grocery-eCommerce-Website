@@ -1,0 +1,47 @@
+{%include "head.html"%}
+<div style="position:absolute;left:0;top:10px;z-index:1000;width:100%;">
+
+<div class="row mt-5">
+  <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="card  mt-5 p-3 display:block" >
+            <div class="text-center h4">CustomerRegistration</div>
+                <form action="customer_register1" method="post">
+                    <div>
+                        <label for="name"><i><b>Name</b></i></label>
+                        <input type="text"  name="name" id="name"  placeholder="Enter Name" class="form-control mt-2">
+                    </div>
+                    <div class="mt-3">
+                        <label for="email"><i><b>Email</b></i></label>
+                        <input type="email" name="email" id="email"  placeholder="Enter email" class="form-control mt-2">
+                    </div>
+                    <div class="mt-3">
+                        <label for="phone"><i><b>Phone</b></i></label>
+                        <input type="number" name="phone" id="phone"  placeholder="Enter phone" class="form-control mt-2">
+                    </div>
+                    <div class="mt-3">
+                        <label for="age"><i><b>Age</b></i></label>
+                        <input type="number" name="age" id="age" placeholder="Enter Age" class="form-control mt-2">
+                    </div>
+                    <div class="mt-3">
+                        <label for="password"><i><b>Password</b></i></label>
+                        <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Enter password" class="form-control mt-2">
+                    </div>
+                    <div class="mt-3">
+                          <label for="gender"><i><b>Gender</b></i></label>
+                          <input type="radio" name="gender" id="gender" value="Male"><label>Male</label>
+                          <input type="radio" name="gender" id="gender1" value="female"><label>Female</label>
+                    </div>
+                    <div class="row">
+                          <div class="col-md-6 mt-2">
+                              <input type="submit" id="submit" value="register" class="btn btn-success w-100">
+                          </div>
+                          <div class="col-md-6 mt-2">
+                              <a href="customer_login" class="btn btn-primary w-100">Login</a>
+                          </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

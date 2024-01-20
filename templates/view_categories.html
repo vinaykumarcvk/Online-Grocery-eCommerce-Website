@@ -1,0 +1,22 @@
+{% include "admin_head.html"%}
+<link rel="stylesheet" href="../static/style.css">
+    <div class="text-center h4 mt-5" style="color:#663300;"><b>View Categories</b></div>
+<div class="flex">
+    {% for category in categories: %}
+            <div class="card mt-10  ml-50 " style="width:15%;height:100%">
+                <div class="text-center"><img class="image" src="{{category['category_image']}}"></div>
+                <div class="text-center h5">{{category["category_name"]}}</div>
+
+            </div>
+        {% endfor %}
+</div>
+<style>
+body{
+    background-image:url("https://www.instacart.com/company/wp-content/uploads/2022/02/groceries-pink-1024x512.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    }
+</style>
+
+
